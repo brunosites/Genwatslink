@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genwatslink</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Genwatslink.png">
+</head>
+<body>
+    <img src="Genwatslink.png" alt="logo" width="100px" height="100px" style="display: inline; border-radius:20px;">
+    <h1 id="titulo">Genwatslink</h1>
+    <p id="texto1">Crie links incríveis no WhatsApp <br> com mensagens personalizadas gratuitamente</p>
+    <div class="parte_generate">
+    <p style="display: inline-block;font-size:30px;">55</p>
+    <input type="number" id="input_num" placeholder="Seu número do watsapp">
+	<button onclick="gerar_num()">Gerar</button>
+	<br>
+	<a href="#" target="_blank" id="link"></a>
+    </div>
+<p style="color:green; font-size:20px;">
+O Genwatslink é uma ferramenta utilitária digital projetada para facilitar o contato comercial e pessoal no WhatsApp. O objetivo principal da plataforma é transformar números de telefone convencionais com DDD em links diretos clicáveis (usando o formato oficial wa.me), removendo atritos de comunicação na internet.
+Como a ferramenta ajuda o usuário:
+<br>• Fim da agenda cheia: O cliente não precisa adicionar o número do celular aos contatos do aparelho apenas para mandar uma mensagem inicial.
+<br>• Agilidade no atendimento: Reduz o caminho que o cliente faz desde o anúncio ou rede social até a janela de conversa com a empresa.
+<br>• Uso totalmente gratuito: A geração de links não possui taxas, limites de cliques ou cobrança por volume de uso.
+Casos de uso ideais para o Genwatslink:
+<br>• Biografias de redes sociais: Perfeito para inserir no link do perfil do Instagram, TikTok ou páginas do Facebook.
+<br>• Botões em sites: Ideal para configurar botões flutuantes de "Fale Conosco" em páginas de vendas (landing pages).
+<br>• Anúncios online: Utilizado para direcionar o público de campanhas pagas (como tráfego pago) diretamente para o time de conversão.
+<br>• Cartões de visita digitais: Facilita o compartilhamento do contato profissional em formato PDF ou QR Code.
+</p>
+<script>
+        function gerar_num() {
+            const input_num = document.getElementById("input_num");
+            const link_html = document.getElementById("link");
+
+            const numero = input_num.value;
+
+            if (numero === "") {
+                alert("Digite seu número do WhatsApp.");
+                return;
+            }
+
+            const link = "https://wa.me/55" + numero;
+
+            link_html.href = link;
+            link_html.textContent = "Abrir conversa no WhatsApp";
+        }
+
+</script>
+</body>
+</html>
